@@ -1,8 +1,12 @@
+body {
+  font-family: sans-serif;
+}
+
 div {
   width: 10rem;
   height: 10rem;
   border: red solid;
-  background: lightgrey;
+  background: hsl(0, 100%, 75%);
   border-radius: 1rem;
   margin: 1.25rem;
   padding: 1rem;
@@ -12,4 +16,8 @@ div {
 
 [data-score]:after {
 	content: " " attr(data-score);
+}
+
+[data-score] {
+	filter: hue-rotate( attr(data-score deg) );
 }
