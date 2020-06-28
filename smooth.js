@@ -37,7 +37,7 @@ function getLocation(elem) {
 function createTransform(moveThis, referenceElem) {
   let tx = 0 - Number(moveThis.dataset.x) + Number(referenceElem.dataset.x);
   let ty = 0 - Number(moveThis.dataset.y) + Number(referenceElem.dataset.y);
-  moveThis.style = `transform: translateX(${tx}px) translateY(${ty}px);`;
+  moveThis.style = `transform: translateX(${tx}px) translateY(${ty}px); filter: hue-rotate(${moveThis.dataset.score*15}deg);`;
 }
 
 /**
